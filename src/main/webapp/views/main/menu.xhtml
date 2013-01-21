@@ -16,8 +16,13 @@
 			<h:outputText value="#{msg.personAddLabel}" />
 		  </h:commandLink></li>
 		<li>
-		  <h:commandLink action="showPersons?faces-redirect=true">
-			 <h:outputText value="#{msg.personAllLabel}" />
+		  <h:commandLink action="showDoctors?faces-redirect=true">
+			 <h:outputText value="#{msg.doctorsAllLabel}" />
+		  </h:commandLink>
+		</li>
+		<li>
+		  <h:commandLink action="showPatients?faces-redirect=true">
+			 <h:outputText value="#{msg.patientsAllLabel}" />
 		  </h:commandLink>
 		</li>
 	</ul>
