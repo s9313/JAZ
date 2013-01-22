@@ -6,9 +6,9 @@
 	template="/templates/default.xhtml">
 	
 	<ui:define name="content">
-	
+
     <h:form>
-    
+   
      <h:dataTable value="#{pacjentBean.allPatients}" var="item">
       <f:facet name="header">#{msg.patientsAllLabel}</f:facet>
       
@@ -38,8 +38,8 @@
       </h:column>
       
      </h:dataTable>
-    </h:form>
-      
+
+    </h:form> 
 	</ui:define>
 	
 </ui:composition>
