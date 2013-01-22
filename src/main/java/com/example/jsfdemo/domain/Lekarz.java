@@ -8,6 +8,25 @@ public class Lekarz {
 	protected String imie;
 	protected String nazwisko;
 	protected String specjalizacja;
+	
+	void lecz(){
+		przyjeciePacjeta();
+		zbadaniePacjeta();
+		postawienieDiagnozy();
+		wypisanieSwiadczenia();		
+	}
+
+	void przyjeciePacjeta(){
+		System.out.println("Przyjecie pacjeta przez lekarza");
+	}
+	
+	void zbadaniePacjeta(){
+		System.out.println("Zbadanie pacjenta przez lekarza");
+	}
+	
+	void postawienieDiagnozy(){};
+	void wypisanieSwiadczenia(){};
+
 
 	@Size(min = 1)
 	public int getId() {
