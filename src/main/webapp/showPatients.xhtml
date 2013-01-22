@@ -9,19 +9,29 @@
 	
     <h:form>
     
-     <h:dataTable value="#{personBean.allPersons}" var="item">
-      <f:facet name="header">#{msg.personAllLabel}</f:facet>
+     <h:dataTable value="#{pacjentBean.allPatients}" var="item">
+      <f:facet name="header">#{msg.patientsAllLabel}</f:facet>
       
       <h:column>
-        <f:facet name="header">#{msg.personFirstNameLabel}</f:facet>
-        #{item.firstName}
+        <f:facet name="header">#{msg.patientFirstNameLabel}</f:facet>
+        #{item.imie}
       </h:column>
       
       <h:column>
-        <f:facet name="header">#{msg.personPinLabel}</f:facet>
-        #{item.pin}
+        <f:facet name="header">#{msg.patientSurnameLabel}</f:facet>
+        #{item.nazwisko}
       </h:column>
-      
+
+      <h:column>
+        <f:facet name="header">#{msg.patientTelLabel}</f:facet>
+        #{item.telefon}
+      </h:column>
+   
+       <h:column>
+        <f:facet name="header">#{msg.patientAdressLabel}</f:facet>
+        #{item.adres}
+      </h:column> 
+          
       <h:column>
         <f:facet name="header">#{msg.action}</f:facet>
         <h:commandLink value="#{msg.actionDelete}" action="#{personBean.deletePerson}"/>

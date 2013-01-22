@@ -8,7 +8,7 @@ import javax.enterprise.context.ApplicationScoped;
 import com.example.jsfdemo.domain.Pacjent;
 
 @ApplicationScoped
-public class PatientManager {
+public class PacjentManager {
 	private List<Pacjent> db = new ArrayList<Pacjent>();
 
 	public void addPacjent(Pacjent Pacjent) {
@@ -23,7 +23,7 @@ public class PatientManager {
 	}
 
 
-	public List<Pacjent> getAllPacjents() {
+	public List<Pacjent> getAllPatients() {
 		return db;
 	}
 }

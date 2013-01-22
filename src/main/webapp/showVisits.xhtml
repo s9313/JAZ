@@ -9,18 +9,28 @@
 	
     <h:form>
     
-     <h:dataTable value="#{personBean.allPersons}" var="item">
-      <f:facet name="header">#{msg.personAllLabel}</f:facet>
+     <h:dataTable value="#{wizytaBean.allVisits}" var="item">
+          <f:facet name="header">#{msg.visitsAllLabel}</f:facet>
       
       <h:column>
-        <f:facet name="header">#{msg.personFirstNameLabel}</f:facet>
-        #{item.firstName}
+        <f:facet name="header">#{msg.visitGodzLabel}</f:facet>
+        #{item.godzina}
       </h:column>
       
       <h:column>
-        <f:facet name="header">#{msg.personPinLabel}</f:facet>
-        #{item.pin}
+        <f:facet name="header">#{msg.visitDataLabel}</f:facet>
+        #{item.data_zabiegu}
       </h:column>
+
+      <h:column>
+        <f:facet name="header">#{msg.visitIdDoctorLabel}</f:facet>
+        #{item.id_lekarza}
+      </h:column>
+   
+       <h:column>
+        <f:facet name="header">#{msg.visitIDPatientLabel}</f:facet>
+        #{item.id_pacjenta}
+      </h:column> 
       
       <h:column>
         <f:facet name="header">#{msg.action}</f:facet>

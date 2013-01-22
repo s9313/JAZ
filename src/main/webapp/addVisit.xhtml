@@ -8,18 +8,21 @@
 		<h:form id="personform">
 			<h:panelGrid columns="2">
 
-				<h:outputText value="#{msg.patientFirstNameLabel}" />
-				<h:inputText id="name" value="#{personBean.person.firstName}" />
+				<h:outputText value="#{msg.visitGodzLabel}" />
+				<h:inputText id="godzina" value="#{wizytaBean.wizyta.godzina}" />
 
-				<h:outputText value="#{msg.personFirstNameLabel}" />
-				<h:inputText id="name" value="#{personBean.person.firstName}" />
+				<h:outputText value="#{msg.visitDataLabel}" />
+				<h:inputText id="data_zabiegu" value="#{wizytaBean.wizyta.data_zabiegu}" />
 
-				<h:outputText value="#{msg.personPinLabel}" />
-				<h:inputText id="yob" value="#{personBean.person.pin}" />
+				<h:outputText value="#{msg.visitIdDoctorLabel}" />
+				<h:inputText id="id_lekarza" value="#{wizytaBean.wizyta.id_lekarza}" />
+				
+				<h:outputText value="#{msg.visitIDPatientLabel}" />
+				<h:inputText id="id_pacjenta" value="#{wizytaBean.wizyta.id_pacjenta}" />
 			</h:panelGrid>
 
 			<h:commandButton value="#{msg.personFormOKButton}"
-				action="#{personBean.addPerson}" />
+				action="#{wizytaBean.addPerson}" />
 				
 			<h:panelGrid>
 				<h:messages showDetail="#{true}" showSummary="#{false}" />

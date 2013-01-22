@@ -8,15 +8,18 @@
 		<h:form id="personform">
 			<h:panelGrid columns="2">
 
-				<h:outputText value="#{msg.personFirstNameLabel}" />
-				<h:inputText id="name" value="#{personBean.person.firstName}" />
+				<h:outputText value="#{msg.doctorFirstNameLabel}" />
+				<h:inputText id="imie" value="#{lekarzBean.lekarz.imie}" />
 
-				<h:outputText value="#{msg.personPinLabel}" />
-				<h:inputText id="yob" value="#{personBean.person.pin}" />
+				<h:outputText value="#{msg.doctorSurnameLabel}" />
+				<h:inputText id="nazwisko" value="#{lekarzBean.lekarz.nazwisko}" />
+				
+				<h:outputText value="#{msg.doctorSpecLabel}" />
+				<h:inputText id="specjalizacja" value="#{lekarzBean.lekarz.specjalizacja}" />
 			</h:panelGrid>
 
 			<h:commandButton value="#{msg.personFormOKButton}"
-				action="#{personBean.addPerson}" />
+				action="#{lekarzBean.addPerson}" />
 				
 			<h:panelGrid>
 				<h:messages showDetail="#{true}" showSummary="#{false}" />
